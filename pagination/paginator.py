@@ -126,7 +126,7 @@ class FinitePaginator(InfinitePaginator):
     """
 
     def __init__(self, object_list_plus, per_page, offset=None,
-        allow_empty_first_page=True, link_template='/page/%d/'):
+        allow_empty_first_page=True, link_template='/page/{}/'):
         super(FinitePaginator, self).__init__(object_list_plus, per_page,
             allow_empty_first_page, link_template)
         self.offset = offset

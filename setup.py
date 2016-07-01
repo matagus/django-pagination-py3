@@ -1,3 +1,4 @@
+from distutils.core import Command
 from setuptools import setup, find_packages
 
 version = '1.1.2'
@@ -102,6 +103,42 @@ pagination tags.  Here's an overview:
     does the latter.
 """
 
+
+class TestCommand(Command):
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        from django.conf import settings
+        settings.configure(
+            DATABASES={'default': {'NAME': ':memory:', 'ENGINE': 'django.db.backends.sqlite3'}},
+            INSTALLED_APPS=('pagination',),
+            ROOT_URLCONF='',
+            SITE_ID=1,
+            TEMPLATES=[
+                {
+                    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                    'DIRS': [],
+                    'APP_DIRS': True,
+                    # 'DEBUG': True,
+                    'OPTIONS': {
+                        'debug': True,
+                    },
+                },
+            ]
+        )
+        from django.core.management import call_command
+        import django
+
+        if django.VERSION[:2] >= (1, 7):
+            django.setup()
+        call_command('test', 'pagination')
+
 setup(
     name='django-pagination-py3',
     version=version,
@@ -121,4 +158,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
+    cmdclass={'test': TestCommand},
 )
