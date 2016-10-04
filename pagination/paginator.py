@@ -16,7 +16,10 @@ class InfinitePaginator(Paginator):
         super(InfinitePaginator, self).__init__(object_list, per_page, orphans,
             allow_empty_first_page)
         # no count or num pages
-        del self._num_pages, self._count
+        if hasattr(self, '_num_pages'):
+            del self._num_pages
+        if hasattr(self, '_count'):
+            del self._count
         # bonus links
         self.link_template = link_template
 
@@ -126,7 +129,7 @@ class FinitePaginator(InfinitePaginator):
     """
 
     def __init__(self, object_list_plus, per_page, offset=None,
-        allow_empty_first_page=True, link_template='/page/%d/'):
+        allow_empty_first_page=True, link_template='/page/{}/'):
         super(FinitePaginator, self).__init__(object_list_plus, per_page,
             allow_empty_first_page, link_template)
         self.offset = offset
