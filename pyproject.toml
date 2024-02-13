@@ -73,11 +73,11 @@ python = ["3.8", "3.9", "3.10"]
 
 [[tool.hatch.envs.test.matrix]]
 django = ["4.1"]
-python = ["3.9", "3.10", "3.11"]
+python = ["3.8", "3.9", "3.10", "3.11"]
 
 [[tool.hatch.envs.test.matrix]]
 django = ["4.2"]
-python = ["3.9", "3.10", "3.11", "3.12"]
+python = ["3.8","3.9", "3.10", "3.11", "3.12"]
 
 [[tool.hatch.envs.test.matrix]]
 django = ["5.0"]
