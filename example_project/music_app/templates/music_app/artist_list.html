@@ -1,0 +1,78 @@
+{% load pagination_tags %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artists</title>
+  <style>
+    /* Style for body */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      padding: 0;
+      width: 80%;
+    }
+
+    /* Style for h1 */
+    h1 {
+      text-align: center;
+    }
+
+    /* Style for ul */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* Style for li */
+    li {
+      padding: 10px 0;
+    }
+
+    /* Style for a */
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: cyan; /* Hover color */
+    }
+
+    /* Style for pagination */
+    .pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Style for pagination spans and links */
+    .pagination span,
+    .pagination a {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 0 2px;
+      border: 1px solid #ccc;
+      color: #333; /* Pagination color */
+    }
+
+    .pagination .current.page {
+      background-color: #ccc; /* Current page background color */
+      color: #fff; /* Current page text color */
+    }
+
+    .pagination .disabled {
+      color: #999; /* Disabled pagination color */
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+{% autopaginate artists 10 %}
+<h1>Artists</h1>
+<ul>
+{% for artist in artists %}
+  <li>
+    <a href="#">{{ artist.name }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% paginate %}
+</body>

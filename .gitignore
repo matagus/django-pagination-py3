@@ -6,3 +6,4 @@ env/
 build/
 .coverage
 coverage.json
+db.sqlite3
