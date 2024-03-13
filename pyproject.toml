@@ -92,6 +92,14 @@ test-cov = "coverage run -m django test --settings tests.settings"
 cov-report = ["coverage json", "coverage report"]
 cov = ["test-cov", "cov-report"]
 
+[tool.hatch.envs.docs]
+dependencies = ["mkdocs", "mkdocs-material"]
+
+[tool.hatch.envs.docs.scripts]
+new = "mkdocs new ."
+build = "mkdocs build {args}"
+serve = "mkdocs serve {args}"
+
 [tool.ruff]
 line-length = 120
 
