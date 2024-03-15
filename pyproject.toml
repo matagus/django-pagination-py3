@@ -42,7 +42,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/matagus/django-pagination-py3"
+Homepage = "https://matagus.github.io/django-pagination-py3"
+Documentation = "https://matagus.github.io/django-pagination-py3"
 Issues = "https://github.com/matagus/django-pagination-py3/issues"
 Changelog = "https://github.com/matagus/django-pagination-py3/releases"
 Repository = "https://github.com/matagus/django-pagination-py3"
