@@ -41,6 +41,21 @@ dependencies = [
     "Django>=4.0",
 ]
 
+[project.optional-dependencies]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "pygments",
+    "pymdown-extensions",
+]
+dev = [
+    "ipython",
+    "ipdb",
+    "mypy",
+    "typing-extensions",
+    "coverage[toml]",
+]
+
 [project.urls]
 Homepage = "https://matagus.github.io/django-pagination-py3"
 Documentation = "https://matagus.github.io/django-pagination-py3"
@@ -94,7 +109,7 @@ cov-report = ["coverage json", "coverage report"]
 cov = ["test-cov", "cov-report"]
 
 [tool.hatch.envs.docs]
-dependencies = ["mkdocs", "mkdocs-material", "pygments"]
+dependencies = ["mkdocs", "mkdocs-material", "pygments", "pymdown-extensions"]
 
 [tool.hatch.envs.docs.scripts]
 new = "mkdocs new ."
