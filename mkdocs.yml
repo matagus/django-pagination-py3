@@ -1,3 +1,26 @@
 site_name: django-pagination-py3
-site_url: https://django-pagination-py3.readthedocs.io/en/latest/
-theme: readthedocs
+site_url: https://github.com/matagus/django-pagination-py3
+repo_url: https://github.com/matagus/django-pagination-py3
+theme:
+  name: "material"
+  palette:
+    primary: green
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.path
+    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+    - tables
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

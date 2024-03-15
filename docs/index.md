@@ -1,4 +1,4 @@
-# Welcome to django-pagination-py3 documentation
+# Getting started
 
 django-pagination-py3 is a set of utilities for creating robust pagination tools throughout a django application.
 
@@ -6,15 +6,7 @@ It is a fork of the original django-pagination, which was created by Eric Holsch
 the original code to work with Python 3+ and Django 4+. Please take into account that no new features will be added
 to this package, only bug fixes and compatibility updates.
 
-## Contents
-
- * [Installation](#installation)
- * [Usage](#usage)
- * [Repository and Issue Tracker](#repository-and-issue-tracker)
- * [PyPi](#pypi)
-
-
-### Installation
+## Installation
 
 Install using pip:
 
@@ -22,7 +14,7 @@ Install using pip:
 pip install django-pagination-py3
 ```
 
-### Usage
+## Usage
 
 ``django-pagination-py3`` allows for easy Digg-style pagination without modifying your views.
 
@@ -116,11 +108,11 @@ for changing the default behavior of the pagination tags.  Here's an overview:
     ``True`` does the former and ``False`` does the latter.
 
 
-### Repository and Issue Tracker
+## Repository and Issue Tracker
 
  * [Repository](https://github.com/matagus/django-pagination-py3)
  * [Issue Tracker](https://github.com/matagus/django-pagination-py3/issues)
 
-### PyPi
+## PyPi
 
  * [Pypi](https://pypi.org/project/django-pagination-py3/)
