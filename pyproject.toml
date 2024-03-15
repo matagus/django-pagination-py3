@@ -93,7 +93,7 @@ cov-report = ["coverage json", "coverage report"]
 cov = ["test-cov", "cov-report"]
 
 [tool.hatch.envs.docs]
-dependencies = ["mkdocs", "mkdocs-material"]
+dependencies = ["mkdocs", "mkdocs-material", "pygments"]
 
 [tool.hatch.envs.docs.scripts]
 new = "mkdocs new ."
