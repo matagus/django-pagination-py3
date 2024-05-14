@@ -4,9 +4,9 @@ except NameError:
     from sets import Set as set
 
 from django import template
-from django.http import Http404
-from django.core.paginator import Paginator, InvalidPage
 from django.conf import settings
+from django.core.paginator import InvalidPage, Paginator
+from django.http import Http404
 
 register = template.Library()
 

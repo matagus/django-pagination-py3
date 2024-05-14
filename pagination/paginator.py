@@ -1,4 +1,4 @@
-from django.core.paginator import Paginator, Page, PageNotAnInteger, EmptyPage
+from django.core.paginator import EmptyPage, Page, PageNotAnInteger, Paginator
 
 
 class InfinitePaginator(Paginator):
