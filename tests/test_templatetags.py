@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
-from django.test import TestCase
 from django.http import HttpRequest as DjangoHttpRequest
 from django.template import Context, Template
+from django.test import TestCase
 
 from pagination.templatetags.pagination_tags import paginate
 

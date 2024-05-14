@@ -121,3 +121,11 @@ line-length = 120
 
 [tool.black]
 line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+known_django = ["django"]
+known_first_party = ["pagination"]
+known_localfolder = ["music_app"]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "DJANGO", "FIRSTPARTY", "LOCALFOLDER"]
