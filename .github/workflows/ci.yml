@@ -17,12 +17,8 @@ jobs:
         django-version: ["4.2", "5.0", "5.1", "5.2"]
         os: [ubuntu-latest]
         exclude:
-          - django-version: "5.0"
-            python-version: "3.10"
-          - django-version: "5.0"
-            python-version: "3.11"
-          - django-version: "5.0"
-            python-version: "3.12"
+          - django-version: "4.2"
+            python-version: "3.13"
           - django-version: "5.0"
             python-version: "3.13"
     runs-on: ${{ matrix.os }}
@@ -32,9 +28,24 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+          cache-dependency-glob: "pyproject.toml"
+      - name: Cache hatch environments
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.local/share/hatch
+            ~/.cache/hatch
+          key: hatch-${{ runner.os }}-py${{ matrix.python-version }}-django${{ matrix.django-version }}-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            hatch-${{ runner.os }}-py${{ matrix.python-version }}-django${{ matrix.django-version }}-
+            hatch-${{ runner.os }}-py${{ matrix.python-version }}-
+      - name: Install hatch with uv
         run: |
-          python -m pip install --upgrade hatch
+          uv tool install hatch
       - name: Run tests for Python ${{ matrix.python-version }} and Django ${{ matrix.django-version }} on ${{ matrix.os }} with coverage report
         run: |
           hatch run test.py${{ matrix.python-version }}-${{ matrix.django-version }}:cov

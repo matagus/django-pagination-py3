@@ -7,7 +7,7 @@ name = "django-pagination-py3"
 dynamic = ["version"]
 description = "A port of ericflo/django-pagination to Python 3 and beyond!"
 readme = "README.md"
-license = "BSD-2-clause"
+license = "BSD-2-Clause"
 authors = [
     { name = "Agustin Mendez", email = "matagus@gmail.com" },
 ]
