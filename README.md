@@ -40,7 +40,7 @@ cd django-pagination-py3
 pip install -e .
 ```
 
-Add `pagination` INSTALLED_APPS to your `settings.py`:
+Add `pagination` to INSTALLED_APPS in your `settings.py`:
 
 ```python
 INSTALLED_APPS = (
@@ -108,7 +108,7 @@ Running Tests
 License
 =======
 
-`django-pagination-py3` is released under an BSD License - see the `LICENSE` file for more information.
+`django-pagination-py3` is released under a BSD License - see the `LICENSE` file for more information.
 
 
 Acknowledgements
