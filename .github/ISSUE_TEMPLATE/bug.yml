@@ -14,7 +14,7 @@ body:
   attributes:
     label: Django Version
     description: Which version of Django were you using?
-    placeholder: 5.1.0
+    placeholder: 5.2.7
   validations:
     required: false
 - type: input

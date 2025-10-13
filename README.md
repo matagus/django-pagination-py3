@@ -3,7 +3,7 @@ django-pagination-py3
 
 ![Python Compatibility](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg) [![PyPi Version](https://img.shields.io/pypi/v/django-pagination-py3.svg)](https://pypi.python.org/pypi/django-pagination-py3)  ![CI badge](https://github.com/matagus/django-pagination-py3/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/matagus/django-pagination-py3/graph/badge.svg?token=a64SxEDQk0)](https://codecov.io/gh/matagus/django-pagination-py3) [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A port of [ericflo/django-pagination](https://github.com/ericflo/django-pagination) to Python 3. Updated to be compatible with Django 4.x and 5.0.
+A port of [ericflo/django-pagination](https://github.com/ericflo/django-pagination) to Python 3. Updated to be compatible with Django 4.x and 5.x.
 
 For versions compatible with Django 3.x and Python 2.7+ please install or download version `1.2.0` from [Releases](https://github.com/matagus/django-pagination-py3/releases) or
 [Pypi](https://pypi.org/project/django-pagination-py3/).
@@ -96,7 +96,7 @@ Running Tests
 
 `hatch run test:test` will run the tests in every Python + Django versions combination.
 
-`hatch run test.py3.13-5.1:test`: will run them for python 3.13 and Django 5.1. Please see possible combinations using
+`hatch run test.py3.13-5.2:test`: will run them for python 3.13 and Django 5.2. Please see possible combinations using
 `hatch env show` ("test" matrix).
 
 
