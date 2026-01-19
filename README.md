@@ -1,7 +1,7 @@
 django-pagination-py3
 ====================
 
-![Python Compatibility](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)
+![Python Compatibility](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue.svg)
 ![Django Compatibility](https://img.shields.io/badge/django-4.2%20|%205.0%20|%205.1%20|%205.2-%2344B78B?labelColor=%23092E20)
 [![PyPi Version](https://img.shields.io/pypi/v/django-pagination-py3.svg)](https://pypi.python.org/pypi/django-pagination-py3)
 ![CI badge](https://github.com/matagus/django-pagination-py3/actions/workflows/ci.yml/badge.svg)
@@ -101,7 +101,7 @@ Running Tests
 
 `hatch run test:test` will run the tests in every Python + Django versions combination.
 
-`hatch run test.py3.13-5.2:test`: will run them for python 3.13 and Django 5.2. Please see possible combinations using
+`hatch run test.py3.14-5.2:test`: will run them for python 3.14 and Django 5.2. Please see possible combinations using
 `hatch env show` ("test" matrix).
 
 
