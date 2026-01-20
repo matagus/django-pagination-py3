@@ -19,6 +19,7 @@ repos:
           - "--target-version=py311"
           - "--target-version=py312"
           - "--target-version=py313"
+          - "--target-version=py314"
         types: [python]
 
   - repo: https://github.com/pycqa/isort
@@ -64,5 +65,5 @@ repos:
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.21.0
     hooks:
-    - id: pyupgrade
-      args: [--py313]
+      - id: pyupgrade
+        args: [--py314]
