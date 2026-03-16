@@ -83,6 +83,8 @@ class AutoPaginateNode(template.Node):
         try:
             page_obj = paginator.page(context["request"].page)
         except InvalidPage:
+            # PAGINATION_INVALID_PAGE_RAISES_404 is read at request time (not import time)
+            # to enable test isolation via override_settings() and allow runtime configuration
             if getattr(settings, "PAGINATION_INVALID_PAGE_RAISES_404", False):
                 raise Http404(
                     "Invalid page requested.  If DEBUG were set to "
