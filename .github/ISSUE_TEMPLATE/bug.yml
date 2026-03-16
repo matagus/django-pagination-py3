@@ -9,12 +9,13 @@ body:
     placeholder: 3.13.0
   validations:
     required: false
+# Update placeholder to latest Django version when new versions are added
 - type: input
   id: django_version
   attributes:
     label: Django Version
     description: Which version of Django were you using?
-    placeholder: 5.2.7
+    placeholder: 6.0.1
   validations:
     required: false
 - type: input
