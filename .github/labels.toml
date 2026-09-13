@@ -68,10 +68,10 @@ color = "AF6601"
 name = "feature request"
 description = "Feature Requests"
 
-[github-actions]
+[github_actions]
 color = "595E8A"
-name = "github-actions"
-description = "Github Actions"
+name = "github_actions"
+description = "Pull requests that update GitHub Actions code"
 
 ["good first issue"]
 color = "2AF655"
